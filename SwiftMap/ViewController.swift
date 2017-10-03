@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,11 @@ class ViewController: UIViewController {
 
         view.backgroundColor = .red
         // Do any additional setup after loading the view, typically from a nib.
+
+        let mapView = MKMapView.init(frame: view.bounds)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.showsUserLocation = true
+        view.addSubview(mapView)
     }
 
     override func didReceiveMemoryWarning() {

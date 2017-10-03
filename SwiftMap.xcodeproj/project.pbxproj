@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		666302B51F7F97D60010C4B4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666302B41F7F97D60010C4B4 /* MapKit.framework */; };
 		666BBE6A1F7F368B002C37B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BBE691F7F368B002C37B1 /* AppDelegate.swift */; };
 		666BBE6C1F7F368B002C37B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BBE6B1F7F368B002C37B1 /* ViewController.swift */; };
 		666BBE711F7F368B002C37B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666BBE701F7F368B002C37B1 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		666302B41F7F97D60010C4B4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		666BBE661F7F368B002C37B1 /* SwiftMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666BBE691F7F368B002C37B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		666BBE6B1F7F368B002C37B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,17 +29,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666302B51F7F97D60010C4B4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		666302B31F7F97D60010C4B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				666302B41F7F97D60010C4B4 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		666BBE5D1F7F368B002C37B1 = {
 			isa = PBXGroup;
 			children = (
 				666BBE681F7F368B002C37B1 /* SwiftMap */,
 				666BBE671F7F368B002C37B1 /* Products */,
+				666302B31F7F97D60010C4B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +106,11 @@
 					666BBE651F7F368B002C37B1 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
